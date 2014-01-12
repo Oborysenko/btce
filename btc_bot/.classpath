@@ -2,9 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="C:/Users/Bober/workspace/libs/org.apache.felix.webconsole-1.0.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Bober/workspace/libs/httpclient-4.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Bober/workspace/libs/httpcore-4.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Bober/workspace/libs/je-4.0.92.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Bober/git/btce/btc_bot/lib/org.apache.felix.webconsole-1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Bober/git/btce/btc_bot/lib/httpclient-4.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Bober/git/btce/btc_bot/lib/httpcore-4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Bober/git/btce/btc_bot/lib/je-4.0.92.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
