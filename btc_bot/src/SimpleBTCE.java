@@ -18,7 +18,7 @@ public class SimpleBTCE {
 		HashMap<String, String> param = new HashMap<String, String>();
 		param.put("count", "2");
 		json = request.authenticatedHTTPRequest("TradeHistory", param);
-		System.out.println(json);*/
+		System.out.println(json);*/ 
 		
 		checkingTickers();
 		fifo.getStack();
