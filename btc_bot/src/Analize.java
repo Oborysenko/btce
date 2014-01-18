@@ -42,10 +42,10 @@ public class Analize {
 		bParam=0;
 		int arrLength = stack.length - 0;
 		xi = (1 + arrLength) / 2 * arrLength;
-		for (int i =0; i < arrLength; i++) {
+		for (int i = 0; i < arrLength; i++) {
 			yi += stack[i];
 			xy += stack[i] * (i+1);
-			xx += (i+1)*(i+1);
+			xx += xi*xi;
 		}
 		aParam = (xi*yi - arrLength*xy)/(xi*xi-arrLength*xx);
 		bParam = (xi*xy-xx*yi)/(xi*xi-arrLength*xx); 
