@@ -14,14 +14,15 @@ public class Analize {
 		System.out.println("curApproximationProgress-"+curApproximationProgress);
 		System.out.println("lastApproximationProgress-"+lastApproximationProgress);
 		if (curApproximationProgress*lastApproximationProgress<0) {
-			
-			if(Double.parseDouble(Parser.getValue(HttpRequests.sendPost(GlobalSettings.currencyPair),"buy"))<VirtualMoney.lastPrice&&!isBuyed) {
+			System.out.println(Double.parseDouble(Parser.getValue(HttpRequests.sendPost(GlobalSettings.currencyPair),"buy")) + ";" + VirtualMoney.lastPrice + ";" + VirtualMoney.isBuyed);
+			System.out.println(Double.parseDouble(Parser.getValue(HttpRequests.sendPost(GlobalSettings.currencyPair),"sell")) + ";" + VirtualMoney.lastPrice + ";" + VirtualMoney.isBuyed);
+			if(Double.parseDouble(Parser.getValue(HttpRequests.sendPost(GlobalSettings.currencyPair),"buy"))<VirtualMoney.lastPrice&&!VirtualMoney.isBuyed) {
 				Trading.Buying();
-				isBuyed=true;
+				VirtualMoney.isBuyed=true;
 			}
-			if(Double.parseDouble(Parser.getValue(HttpRequests.sendPost(GlobalSettings.currencyPair),"sell"))>VirtualMoney.lastPrice&&isBuyed) {
+			if(Double.parseDouble(Parser.getValue(HttpRequests.sendPost(GlobalSettings.currencyPair),"sell"))>VirtualMoney.lastPrice&&VirtualMoney.isBuyed) {
 				Trading.Selling();
-				isBuyed=false;
+				VirtualMoney.isBuyed=false;
 			}			
 			
 			/*
