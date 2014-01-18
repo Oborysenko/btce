@@ -11,7 +11,7 @@ import org.json.JSONObject;
 
 public class SimpleBTCE {
 	
-	public static void main(String[] args) throws IOException, JSONException {
+	public static void main(String[] args) throws NumberFormatException, Exception {
 /*		HttpRequests request = new HttpRequests();
 		JSONObject json = request.authenticatedHTTPRequest("getInfo", null);
 		System.out.println(json);
@@ -29,6 +29,7 @@ public class SimpleBTCE {
 			System.out.println(stack[i].toString() + ";");
 		}
 		Analize.getProgressDirection();
+		System.out.println("Trade Finish: USD:" + VirtualMoney.USD + "BTC:" + VirtualMoney.BTC);
 	}
 	
 	private static void checkingTickers() {

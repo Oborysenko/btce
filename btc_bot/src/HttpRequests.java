@@ -8,9 +8,9 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class HttpRequests {
 	//TODO Unfinished method sendPost(String curPair)
-	private final String USER_AGENT = "Mozilla/5.0";
+	private final static String USER_AGENT = "Mozilla/5.0";
 
-	private String httpRequest(String url) throws Exception {
+	private static String httpRequest(String url) throws Exception {
 		String respounse = "";
 		URL obj = new URL(url);
 		HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
@@ -45,12 +45,12 @@ public class HttpRequests {
 		in.close();
  
 		//print result
-		System.out.println(response.toString());
+//		System.out.println(response.toString());
 		return response.toString();
 		
 	}
 	
-	public String sendPost(String curPair) throws Exception {
+	public static String sendPost(String curPair) throws Exception {
 		String httpRespounse = httpRequest("https://btc-e.com/api/3/ticker/" + curPair);
 //		int posA = httpRespounse.indexOf("buy");
 		return httpRespounse;
